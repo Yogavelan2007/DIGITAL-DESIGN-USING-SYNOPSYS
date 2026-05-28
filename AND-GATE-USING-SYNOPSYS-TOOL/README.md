@@ -1,29 +1,71 @@
-# AND Gate Design using Synopsys
+# CMOS AND Gate Design using Synopsys
 
-This project demonstrates the design and simulation of an AND Gate using Synopsys tools.
+This project demonstrates the design and simulation of a CMOS AND gate using Synopsys tools.
 
-## Tools Used
+---
 
-* Synopsys
+# Tools Used
 
-## Project Contents
+* Synopsys Custom Compiler
+* Synopsys PrimeWave
 
-* AND Schematic
-* AND Symbol
+---
+
+# Project Contents
+
+* CMOS AND gate schematic
+* Symbol design
 * Simulation waveform
+* Testbench configuration
 
-## Output Images
+---
 
-### AND Schematic
+# Testbench Configuration
 
-![schematic](and_schematic.jpeg)
+The testbench for the CMOS AND gate design uses VPULSE voltage sources to provide the input signals. These pulse voltages toggle between 0 V (logic LOW) and 1 V (logic HIGH) to simulate digital logic conditions.
 
-## AND Symbol
+## Key Parameters of VPULSE
 
-![symbol](and_symbol.jpeg)
+* V1 (Initial Voltage): 0 V
+* V2 (Pulsed Voltage): 1 V
+* Period: 20 ns
+* Rise Time: 1 ns
+* Fall Time: 1 ns
+* Pulse Width: 10 ns
 
-### Waveform
+A VDC supply of 1 V powers the CMOS circuit while the ground terminal acts as the common reference for NMOS transistors.
 
-![waveform](and_waveform.jpeg)
+This setup verifies the logical AND operation for all input combinations.
+
+---
+
+# Output Verification
+
+The simulation waveform confirms correct AND gate operation:
+
+* Output becomes HIGH only when both inputs are HIGH
+* Output remains LOW for all other input combinations
+
+---
+
+# Output Images
+
+## Schematic
+
+![AND Schematic](and_schematic.jpeg)
+
+---
+
+## Symbol
+
+![AND Symbol](and_symbol.jpeg)
+
+---
+
+## Waveform
+
+![AND Waveform](and_waveform.jpeg)
+
+---
 
 

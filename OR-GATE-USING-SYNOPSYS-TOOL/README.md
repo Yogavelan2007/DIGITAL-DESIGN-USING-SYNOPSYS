@@ -1,30 +1,71 @@
-# OR Gate Design using Synopsys
+# CMOS OR Gate Design using Synopsys
 
-This project demonstrates the design and simulation of an OR Gate using Synopsys tools.
+This project demonstrates the design and simulation of a CMOS OR gate using Synopsys tools.
 
-## Tools Used
+---
 
-* Synopsys
+# Tools Used
 
-## Project Contents
+* Synopsys Custom Compiler
+* Synopsys PrimeWave
 
-* OR Schematic
-* OR Symbol 
+---
+
+# Project Contents
+
+* CMOS OR gate schematic
+* Symbol design
 * Simulation waveform
+* Testbench configuration
 
+---
 
-## Output Images
+# Testbench Configuration
 
-### OR Schematic
+The testbench for the CMOS OR gate design uses VPULSE voltage sources to generate the input signals. These pulse voltages switch between 0 V and 1 V to represent logic LOW and logic HIGH conditions.
 
-![schematic](or_schematic.jpeg)
+## Key Parameters of VPULSE
 
-### OR Symbol
+* V1 (Initial Voltage): 0 V
+* V2 (Pulsed Voltage): 1 V
+* Period: 20 ns
+* Rise Time: 1 ns
+* Fall Time: 1 ns
+* Pulse Width: 10 ns
 
-![Symbol](symbol.jpeg)
+A 1 V VDC supply powers the PMOS network, while the NMOS source terminals are connected to ground.
 
-### Waveform
+This setup validates the OR gate logic operation.
 
-![waveform](waveform.jpeg)
+---
+
+# Output Verification
+
+The simulation waveform confirms correct OR gate behavior:
+
+* Output becomes HIGH when any one of the inputs is HIGH
+* Output becomes LOW only when both inputs are LOW
+
+---
+
+# Output Images
+
+## Schematic
+
+![OR Schematic](or_schematic.jpeg)
+
+---
+
+## Symbol
+
+![OR Symbol](or_symbol.jpeg)
+
+---
+
+## Waveform
+
+![OR Waveform](or_waveform.jpeg)
+
+---
 
 
